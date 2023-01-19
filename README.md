@@ -1,4 +1,4 @@
-# Muffes Bygg Oy 
+# Mr Flinck Oy Ab
 ## Official WP theme 
 Add all stuff needed here as you go
 ### Setup
