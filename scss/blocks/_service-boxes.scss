@@ -1,0 +1,16 @@
+.block-service-boxes {
+  padding: 6rem 0 3rem;
+  background: #ffffff;
+  .service-box {
+    margin-bottom:4rem;
+  }
+  .icon-container {
+    margin-right:2rem;
+    svg {
+      width: 36px;
+      path {
+        fill:#f55c5c;
+      }
+    }
+  }
+}
