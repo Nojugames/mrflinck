@@ -1,7 +1,7 @@
 <?php ?>
 
 <nav class="mrflinck-navbar">
-    <div class="container navbar-container d-flex justify-content-between">
+    <div class="container navbar-container d-flex justify-content-between align-items-center">
         <div class="d-md-none d-flex align-items-center ms-3">
             <a class="" data-bs-toggle="offcanvas" href="#mobileMenu" role="button"
                aria-controls="offcanvas"><span class="visually-hidden">Toggle menu</span>
@@ -36,6 +36,9 @@
             ));
             ?>
         </div>
+        <a href="" class="btn btn-mrflinck">
+            Gör en beställning
+        </a>
     </div>
 </nav>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="offcanvasLabel">

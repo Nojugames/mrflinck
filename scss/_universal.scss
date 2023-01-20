@@ -64,30 +64,15 @@ a {
   }
 }
 
-.btn-lg {
-  padding:16px 32px;
-  position: relative;
-  border-radius: 0;
-  border:2px solid white;
-  &.bg-green {
-    border:2px solid $green;
-    &:after {
-      position: absolute;
-      content:"";
-      left:0.5rem;
-      top:0.25rem;
-      width:calc(100% - 16px);
-      height:calc(100% - 8px);
-      border:2px solid white;
-    }
-  }
-}
 
-.navbar-brand {
-  img {
-    max-height: 40px;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+
+.btn-mrflinck {
+  background: #ffc67d;
+  color:black;
+  font-weight: bold;
+  margin-left:3rem;
+  &:hover {
+    background: white;
   }
 }
 
@@ -98,7 +83,7 @@ a {
     font-size: 18px;
   }
   a {
-    color: $gold;
+    color: $yellow;
     font-weight: bold;
     text-decoration: none;
   }

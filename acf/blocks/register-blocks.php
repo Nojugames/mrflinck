@@ -4,24 +4,24 @@ function my_acf_init_block_types() {
 	// Check function exists.
 	if( function_exists('acf_register_block_type') ) {
 		// register a testimonial block.block-cta-images
-		acf_register_block_type(array(
-			'name'              => 'woo-product-lift',
-			'title'             => __('Woo Product Lift'),
-			'description'       => __('A custom product lift block.'),
-			'render_template'   => 'acf/blocks/woo-product-lift.php',
-			'category'          => 'formatting',
-			'icon'              => 'admin-comments',
-			'keywords'          => array( 'woo','product','lift','testimonial', 'quote' ),
-		));
-        acf_register_block_type(array(
-            'name'              => 'cta-images',
-            'title'             => __('CTA images'),
-            'description'       => __('A custom product lift block.'),
-            'render_template'   => 'acf/blocks/cta-images.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'cta','image','lift' ),
-        ));
+		//acf_register_block_type(array(
+		//	'name'              => 'woo-product-lift',
+		//	'title'             => __('Woo Product Lift'),
+		//	'description'       => __('A custom product lift block.'),
+		//	'render_template'   => 'acf/blocks/woo-product-lift.php',
+		//	'category'          => 'formatting',
+		//	'icon'              => 'admin-comments',
+		//	'keywords'          => array( 'woo','product','lift','testimonial', 'quote' ),
+		//));
+        //acf_register_block_type(array(
+        //    'name'              => 'cta-images',
+        //    'title'             => __('CTA images'),
+        //    'description'       => __('A custom product lift block.'),
+        //    'render_template'   => 'acf/blocks/cta-images.php',
+        //    'category'          => 'formatting',
+        //    'icon'              => 'admin-comments',
+        //    'keywords'          => array( 'cta','image','lift' ),
+        //));
         acf_register_block_type(array(
             'name'              => 'service-boxes',
             'title'             => __('Service boxes'),
@@ -31,14 +31,23 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'service','boxes','lift' ),
         ));
+        //acf_register_block_type(array(
+        //    'name'              => 'recent-posts',
+        //    'title'             => __('Recent posts'),
+        //    'description'       => __('A custom recent posts block.'),
+        //    'render_template'   => 'acf/blocks/recent-posts.php',
+        //    'category'          => 'formatting',
+        //    'icon'              => 'admin-comments',
+        //    'keywords'          => array( 'recent','posts','lift' ),
+        //));
         acf_register_block_type(array(
-            'name'              => 'recent-posts',
-            'title'             => __('Recent posts'),
-            'description'       => __('A custom recent posts block.'),
-            'render_template'   => 'acf/blocks/recent-posts.php',
+            'name'              => 'map-full',
+            'title'             => __('Full width map'),
+            'description'       => __('Show a full width map.'),
+            'render_template'   => 'acf/blocks/map-full.php',
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
-            'keywords'          => array( 'recent','posts','lift' ),
+            'keywords'          => array( 'map','karta','kartta' ),
         ));
         //acf_register_block_type(array(
         //    'name'              => 'reference-posters',

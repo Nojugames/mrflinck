@@ -94,6 +94,11 @@
                         "id": ""
                     },
                     "choices": {
+                        "icon-water": "Water",
+                        "icon-air-conditioner": "Air conditioner",
+                        "icon-sun": "Sun",
+                        "icon-fan": "Fan",
+                        "icon-snowflake": "Snowflake",
                         "icon-code": "Code",
                         "icon-tv": "TV",
                         "icon-ai": "AI",
@@ -195,5 +200,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671358997
+    "modified": 1674223223
 }

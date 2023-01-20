@@ -50,8 +50,16 @@
       }
     }
   }
-
 }
+
+.navbar-brand {
+  img {
+    max-height: 72px;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
+}
+
 .mrflinck-navbar {
   .navbar-container {
     display: flex;

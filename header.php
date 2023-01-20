@@ -26,7 +26,7 @@
 <div id="wrapper" class="hfeed">
     <header id="header" role="banner">
 
-        <?php require_once('elements/top-navbar.php'); ?>
+        <?php //require_once('elements/top-navbar.php'); ?>
         <?php require_once('elements/mrflinck-navbar.php'); ?>
     </header>
     <div id="container">
