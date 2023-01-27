@@ -21,7 +21,7 @@ if (!empty($block['align'])) {
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 offset-lg-3 text-center mb-5">
                 <h2>Ta kontakt</h2>
                 <p>Fyll i formuläret, ring eller skicka e-post. Man når oss också på Whatsapp, Facebook, Instagram etc. etc.</p>
             </div>

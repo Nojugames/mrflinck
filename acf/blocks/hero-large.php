@@ -68,7 +68,7 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center align-items-center" style="z-index:11">
-                    <img class="mw-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/democool.png" alt="">
+                    <img class="mw-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lofoten.png" alt="">
                 </div>
             </div>
         </div>
