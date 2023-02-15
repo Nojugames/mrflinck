@@ -19,8 +19,6 @@ if (!empty($block['align'])) {
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5">
     <div class="container">
-        <h2 class="mb-3">Galleria</h2>
-        <p>This is a gallery</p>
         <?php
         $images = get_field('images');
         $size = 'large'; // (thumbnail, medium, large, full or custom size)

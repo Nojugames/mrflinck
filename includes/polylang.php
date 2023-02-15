@@ -7,6 +7,8 @@ if(function_exists('pll_register_string')) {
     pll_register_string( 'Telefon', 'Telefon' );
     pll_register_string( 'E-post', 'E-post' );
     pll_register_string( 'Skicka e-post', 'Skicka e-post' );
+    pll_register_string( 'Beställningslänk', 'Beställningslänk' );
+    pll_register_string( 'Gör en beställning', 'Gör en beställning' );
 }
 
 function my_plugin_override() {

@@ -36,8 +36,8 @@
             ));
             ?>
         </div>
-        <a href="" class="btn btn-mrflinck">
-            Gör en beställning
+        <a href="<?php echo pll__('Beställningslänk'); ?>" class="btn btn-mrflinck">
+            <?php echo pll__('Gör en beställning'); ?>
         </a>
     </div>
 </nav>
