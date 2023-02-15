@@ -3,7 +3,7 @@
 <nav class="mrflinck-navbar">
     <div class="container navbar-container d-flex justify-content-between align-items-center">
         <div class="d-md-none d-flex align-items-center ms-3">
-            <a class="" data-bs-toggle="offcanvas" href="#mobileMenu" role="button"
+            <a class="mobile-toggler" data-bs-toggle="offcanvas" href="#mobileMenu" role="button"
                aria-controls="offcanvas"><span class="visually-hidden">Toggle menu</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
