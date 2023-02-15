@@ -31,6 +31,15 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'service','boxes','lift' ),
         ));
+        acf_register_block_type(array(
+            'name'              => 'product-cards',
+            'title'             => __('Product cards'),
+            'description'       => __('A custom product cards block.'),
+            'render_template'   => 'acf/blocks/product-cards.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'products','cards','product' ),
+        ));
         //acf_register_block_type(array(
         //    'name'              => 'recent-posts',
         //    'title'             => __('Recent posts'),
