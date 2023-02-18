@@ -1,0 +1,37 @@
+.block-price-list {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  .price-list-container {
+
+    ul {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        padding: 0.5rem;
+        border-bottom: 1px solid #d0d0d0;
+
+        span {
+          display: inline-block;
+        }
+
+        .recipe-amount {
+          min-width: 100px;
+        }
+
+        .recipe-ingredient {
+
+        }
+      }
+    }
+
+    li {
+      span {
+
+      }
+    }
+
+  }
+}
