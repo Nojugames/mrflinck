@@ -134,6 +134,25 @@
             "media_upload": 1
         },
         {
+            "key": "field_63f08013b86c1",
+            "label": "Price",
+            "name": "price",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_62fb3faf1acac",
             "label": "Button",
             "name": "button",
@@ -229,5 +248,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1676481266
+    "modified": 1676705821
 }

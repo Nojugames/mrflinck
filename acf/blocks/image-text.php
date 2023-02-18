@@ -39,6 +39,9 @@ if ($button) {
             <div class="content-container">
                 <p class="mb-4"><?php the_field('top_title'); ?></p>
                 <h2 class="mb-4"><?php the_field('title'); ?></h2>
+                <p class="card-price">
+                    <?php the_field('price'); ?>
+                </p>
                 <?php the_field('text'); ?>
                 <?php if ($button): ?>
                     <a class="btn btn-primary bg-green btn-lg" href="<?php echo esc_url($button_url); ?>"

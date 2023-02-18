@@ -49,10 +49,12 @@ if (!empty($block['align'])) {
                                 <p>
                                     <?php the_sub_field('minfo'); ?>
                                 </p>
+                                <p class="card-price">
+                                    <?php the_sub_field('price'); ?>
+                                </p>
                                 <p class="fake-link">
                                     Läs mera &raquo;
                                 </p>
-
                             </div>
                         </a>
                     </div>
