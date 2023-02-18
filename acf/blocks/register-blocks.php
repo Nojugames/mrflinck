@@ -31,6 +31,15 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'service','boxes','lift' ),
         ));
+        //acf_register_block_type(array(
+        //    'name'              => 'price-list',
+        //    'title'             => __('Price list'),
+        //    'description'       => __('A custom price list block.'),
+        //    'render_template'   => 'acf/blocks/price-list.php',
+        //    'category'          => 'formatting',
+        //    'icon'              => 'admin-comments',
+        //    'keywords'          => array( 'price','list','hinta', 'prislista' ),
+        //));
         acf_register_block_type(array(
             'name'              => 'product-cards',
             'title'             => __('Product cards'),
