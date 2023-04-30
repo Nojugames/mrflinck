@@ -12,7 +12,7 @@ function mrflinck_enqueue() {
 	// Using purged files atm, change if necessary.
 
 	//wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap', '1.0.0' );
-	wp_register_style( 'mrflinck-style', get_stylesheet_directory_uri() . '/dist/css/theme.css', array(), '2.0.10' );
+	wp_register_style( 'mrflinck-style', get_stylesheet_directory_uri() . '/dist/css/theme.css', array(), '2.1.2' );
 	//wp_register_style( 'mrflinck-style', get_stylesheet_directory_uri() . '/dist/css/theme.css', array(), '2.0.2' );
 
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), '5.0.3', true );

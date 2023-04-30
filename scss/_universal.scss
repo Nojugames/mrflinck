@@ -45,6 +45,10 @@ svg {
 a {
   font-weight: 500;
 }
+a[href^="tel"]{
+  color:inherit;
+  text-decoration:none;
+}
 // Don't get why this not standard
 .ratio {
   img {

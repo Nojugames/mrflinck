@@ -31,6 +31,15 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'service','boxes','lift' ),
         ));
+        acf_register_block_type(array(
+            'name'              => 'image-list',
+            'title'             => __('Image and list'),
+            'description'       => __('A custom image and list block.'),
+            'render_template'   => 'acf/blocks/image-list.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'image','list','lift' ),
+        ));
         //acf_register_block_type(array(
         //    'name'              => 'price-list',
         //    'title'             => __('Price list'),

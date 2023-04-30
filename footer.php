@@ -15,19 +15,17 @@
                 }
                 ?>
                 <?php //get_template_part('elements/social', 'media'); ?>
-                <p>
-                    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.
-                    © 2018 Qode Interactive, All Rights Reserved
-                </p>
+                <?php dynamic_sidebar('footer-1'); ?>
+
                 <p class="text-white">
                     &copy; <?php echo esc_html(date_i18n(__('Y', 'mrflinck'))); ?> <?php echo esc_html(get_bloginfo('name')); ?>
                     Oy</p>
             </div>
             <div class="col-md-4">
-                <?php dynamic_sidebar('footer-1'); ?>
+                <?php dynamic_sidebar('footer-2'); ?>
             </div>
             <div class="col-md-4">
-                <?php dynamic_sidebar('footer-2'); ?>
+                <?php dynamic_sidebar('footer-3'); ?>
             </div>
 
         </div>

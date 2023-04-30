@@ -16,20 +16,22 @@ if (!empty($block['align'])) {
     $className .= ' align' . $block['align'];
 }
 
+$gformId = get_field('form_id')
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center mb-5">
-                <h2>Ta kontakt</h2>
-                <p>Fyll i formuläret, ring eller skicka e-post. Man når oss också på Whatsapp, Facebook, Instagram etc. etc.</p>
+                <h2><?php the_field('title'); ?></h2>
+                <?php the_field('text'); ?>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-5 order-3 order-lg-1 map-container">
-
-                <?php echo do_shortcode('[gravityform id="1" title="true"]'); ?>
+                <?php if($gformId): ?>
+                    <?php echo do_shortcode('[gravityform id="'.$gformId.'" title="true"]'); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-6 offset-lg-1 order-2">
                     <div class="contact-box-container">

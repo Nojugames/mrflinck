@@ -18,7 +18,7 @@ if (!empty($block['align'])) {
 
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid mt-5 py-5"
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5"
      style="background-color:#f8f8f8;">
     <div class="container">
         <div class="text-center">
@@ -30,10 +30,10 @@ if (!empty($block['align'])) {
         <?php if (have_rows('products')): ?>
             <div class="row">
                 <?php while (have_rows('products')) : the_row(); ?>
-                    <div class="col-md-6 col-lg-3 product-card">
+                    <div class="col-md-6 col-lg-4 product-card">
                         <a href="<?php the_sub_field('link'); ?>" class="product-inner"
                            title="<?php the_sub_field('product_name'); ?>">
-                            <div class="ratio ratio-1x1 img-fluid">
+                            <div class="ratio ratio-4x3 img-fluid">
                                 <?php
                                 $image = get_sub_field('image');
                                 $size = 'medium'; // (thumbnail, medium, large, full or custom size)
@@ -53,7 +53,7 @@ if (!empty($block['align'])) {
                                     <?php the_sub_field('price'); ?>
                                 </p>
                                 <p class="fake-link">
-                                    Läs mera &raquo;
+                                    <?php echo pll__('Läs mera'); ?> &raquo;
                                 </p>
                             </div>
                         </a>

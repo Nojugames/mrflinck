@@ -1,13 +1,13 @@
 <?php
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'block-image-text-' . $block['id'];
+$id = 'block-image-list-' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'block-image-text';
+$className = 'block-image-list';
 if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
 }
@@ -28,11 +28,11 @@ if ($button) {
 }
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container py-5">
     <div class="row">
         <div class="col-lg-6 pe-3 mb-3 mb-lg-0">
             <?php if ($image): ?>
-                <?php echo wp_get_attachment_image($image, $size); ?>
+                <?php echo wp_get_attachment_image($image, $size, '', array('class' => 'w-100 h-auto')); ?>
             <?php endif; ?>
         </div>
         <div class="ps-3 col-lg-6 d-flex justify-content-center align-items-start flex-column">
@@ -47,15 +47,14 @@ if ($button) {
                             </svg>
                         </div>
                         <div>
-                            <h3><?php the_sub_field('heading'); ?></h3>
+                            <p class="mb-0"><?php the_sub_field('heading'); ?></p>
+                            <?php if(get_sub_field('text')): ?>
                             <p><?php the_sub_field('text'); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
-                <p class="card-price">
-                    <?php the_field('price'); ?>
-                </p>
-                <?php the_field('text'); ?>
+
                 <?php if ($button): ?>
                     <a class="btn btn-primary bg-green btn-lg" href="<?php echo esc_url($button_url); ?>"
                        target="<?php echo esc_attr($button_target); ?>"><?php echo esc_html($button_title); ?></a>
