@@ -35,7 +35,7 @@ if ($button) {
                 <?php echo wp_get_attachment_image($image, $size, '', array('class' => 'w-100 h-auto')); ?>
             <?php endif; ?>
         </div>
-        <div class="ps-3 col-lg-6 d-flex justify-content-center align-items-start flex-column">
+        <div class="ps-3 col-lg-6 d-flex justify-content-start align-items-start flex-column">
             <div class="content-container">
                 <p class="mb-4"><?php the_field('top_title'); ?></p>
                 <h2 class="mb-4"><?php the_field('title'); ?></h2>
