@@ -1,0 +1,20 @@
+.block-faq-accordion {
+  .accordion-item {
+    box-shadow: 5px 5px 30px rgba(0,0,0,.125);
+    margin-bottom: 24px;
+    text-decoration: none;
+    .accordion-header {
+      //background-color: $blue-dark;
+
+      .accordion-button {
+        background-color: black;
+        color:white;
+
+      }
+    }
+    .accordion-collapse {
+
+    }
+  }
+
+}

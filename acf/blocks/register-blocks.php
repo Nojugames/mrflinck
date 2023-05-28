@@ -32,6 +32,15 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'service','boxes','lift' ),
         ));
         acf_register_block_type(array(
+            'name'              => 'faq-accordion',
+            'title'             => __('FAQ accordion'),
+            'description'       => __('Accordion block with questions and answers.'),
+            'render_template'   => 'acf/blocks/faq-accordion.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'text','image', 'accordion', 'question', 'faq' ),
+        ));
+        acf_register_block_type(array(
             'name'              => 'image-list',
             'title'             => __('Image and list'),
             'description'       => __('A custom image and list block.'),
