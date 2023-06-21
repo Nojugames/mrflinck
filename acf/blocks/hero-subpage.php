@@ -23,10 +23,10 @@ if (!empty($block['align'])) {
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 text-center">
                     <?php
-                    if ( function_exists('yoast_breadcrumb') ) {
-                        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-                    }
-                    ?>
+                    //if ( function_exists('yoast_breadcrumb') ) {
+                    //    yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                    //}
+                    //?>
                     <h1><?php if(get_field('heading')): the_field('heading'); else: the_title(); endif; ?></h1>
                     <p class="hero-text"><?php the_field('text'); ?></p>
                 </div>

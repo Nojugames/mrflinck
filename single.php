@@ -14,9 +14,9 @@ $the_query = new WP_Query( $args ); ?>
             <div class="d-flex justify-content-center align-items-center flex-column py-5 hero-info-container"
                  style="min-height: 400px; ">
                 <?php
-                if ( function_exists('yoast_breadcrumb') ) {
-                    yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-                }
+                //if ( function_exists('yoast_breadcrumb') ) {
+                //    yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                //}
                 ?>
                     <h1 class="text-white" style="font-size:60px;"><?php the_title(); ?></h1>
 

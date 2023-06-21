@@ -51,7 +51,7 @@ if (!empty($block['align'])) {
                     </svg>
                     <div class="content-container">
                         <p class="contact-type"><?php echo pll__('Osoite'); ?>:</p>
-                        <p><?php the_field('address'); ?></p>
+                        <p><?php echo pll__('Baggövägen 401 D 10600 Ekenäs, Raseborg'); ?></p>
                     </div>
                 </div>
             </div>
