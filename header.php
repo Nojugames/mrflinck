@@ -20,6 +20,8 @@
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/photoswipe/photoswipe.esm.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/photoswipe/photoswipe-lightbox.esm.min.js"></script>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/photoswipe/photoswipe.css">
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/op-laskuri/op-calc-widget.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/op-laskuri/op-calc-widget.css">
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>

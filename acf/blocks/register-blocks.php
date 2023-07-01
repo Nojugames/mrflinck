@@ -32,6 +32,15 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'service','boxes','lift' ),
         ));
         acf_register_block_type(array(
+            'name'              => 'op-rahoitus',
+            'title'             => __('OP Rahoitus'),
+            'description'       => __('A custom OP rahoitus block.'),
+            'render_template'   => 'acf/blocks/op-rahoitus.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'op','rahoitus' ),
+        ));
+        acf_register_block_type(array(
             'name'              => 'faq-accordion',
             'title'             => __('FAQ accordion'),
             'description'       => __('Accordion block with questions and answers.'),
