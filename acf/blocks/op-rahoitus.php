@@ -18,9 +18,7 @@ if (!empty($block['align'])) {
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid p-0">
-    <p>Begore laskuri</p>
     <div id="op-keti-init-content"></div>
-    <p>After laskuri</p>
     <style>
         .op-keti__container {
             margin: 1rem auto !important;
