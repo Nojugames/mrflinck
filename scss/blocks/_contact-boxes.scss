@@ -1,6 +1,6 @@
 .block-contact-boxes {
   .contact-box-container {
-    margin-bottom:2rem;
+    //margin-bottom:1rem;
   }
   .map-container {
     padding-bottom:2rem;
@@ -21,8 +21,8 @@
     padding:2rem 1rem;
     svg {
       border-radius:4px;
-      width:75px;
-      height:75px;
+      width:60px;
+      height:60px;
       padding:1rem;
       background: $orange;
       margin-right:2rem;
@@ -38,7 +38,7 @@
       &.contact-type {
         color: black;
         font-weight: 700;
-        margin-bottom:10px;
+        margin-bottom:6px;
       }
     }
     .content-container {
