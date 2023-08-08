@@ -3,6 +3,7 @@ add_action( 'plugins_loaded', 'my_plugin_override' );
 
 if(function_exists('pll_register_string')) {
     pll_register_string( 'Adress', 'Adress' );
+    pll_register_string( 'Footer text', 'Footer text' );
     pll_register_string( 'Ring', 'Ring' );
     pll_register_string( 'Läs mera', 'Läs mera' );
     pll_register_string( 'Telefon', 'Telefon' );

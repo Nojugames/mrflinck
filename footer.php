@@ -16,6 +16,7 @@
                 ?>
                 <?php //get_template_part('elements/social', 'media'); ?>
                 <?php dynamic_sidebar('footer-1'); ?>
+                <p class="text-white mb-4"><?php echo pll__('Footer text'); ?></p>
 
                 <p class="text-white">
                     &copy; <?php echo esc_html(date_i18n(__('Y', 'mrflinck'))); ?> <?php echo esc_html(get_bloginfo('name')); ?>

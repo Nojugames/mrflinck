@@ -49,7 +49,14 @@ $icons = array(
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mb-5 pb-5">
-                <img class="mw-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Mister-Flinck-logo_mascot.jpg" alt="">
+
+                <?php $image = get_field( 'image' );
+                $size        = 'large'; // (thumbnail, medium, large, full or custom size)
+                if ( $image ) {
+                    echo wp_get_attachment_image( $image, $size, false, array( 'class' => 'mw-100 h-auto' ) );
+                }
+
+                ?>
             </div>
             <div class="col-lg-7 offset-md-1">
                 <p>--- <?php the_field('top_text'); ?></p>
