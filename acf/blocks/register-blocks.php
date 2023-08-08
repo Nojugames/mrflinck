@@ -39,6 +39,7 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'op','rahoitus' ),
+            'mode'              => 'edit',
         ));
         acf_register_block_type(array(
             'name'              => 'faq-accordion',
