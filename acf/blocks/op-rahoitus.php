@@ -17,13 +17,13 @@ if (!empty($block['align'])) {
 }
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid p-0">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 op-content pt-5">
+            <div class="col-xl-6 col-lg-5 op-content pt-5">
                 <?php the_field('content')?>
             </div>
-            <div class="col-md-6">
+            <div class="col-xl-6 col-lg-7">
                 <div id="op-keti-init-content"></div>
             </div>
         </div>
@@ -31,13 +31,16 @@ if (!empty($block['align'])) {
 
     <style>
         .op-keti__container {
-            margin: 1rem auto !important;
+            margin: 0rem auto !important;
         }
         .op-keti__container footer {
             background: white;
         }
         .op-keti__container footer p {
             color: black;
+        }
+        .op-keti__widget.op-keti__type--content.op-keti--opened .op-keti__container {
+            max-width:800px;
         }
     </style>
     <script type="text/javascript">
