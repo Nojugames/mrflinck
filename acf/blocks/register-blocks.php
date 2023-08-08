@@ -265,5 +265,14 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'footer', 'contact' ),
         ));
+        acf_register_block_type(array(
+            'name'              => 'footer-some',
+            'title'             => __('Footer Some'),
+            'description'       => __('A custom social media in footer block.'),
+            'render_template'   => 'acf/blocks/footer-some.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'footer', 'contact', 'some', 'social', 'media' ),
+        ));
 	}
 }

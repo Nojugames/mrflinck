@@ -55,7 +55,6 @@ if (!empty($block['align'])) {
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
