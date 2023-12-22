@@ -19,8 +19,8 @@
                 <p class="text-white mb-4"><?php echo pll__('Footer text'); ?></p>
 
                 <p class="text-white">
-                    &copy; <?php echo esc_html(date_i18n(__('Y', 'mrflinck'))); ?> <?php echo esc_html(get_bloginfo('name')); ?>
-                    Oy</p>
+                    &copy; <?php echo esc_html(date_i18n(__('Y', 'mrflinck'))); ?> <?php echo esc_html("Mr Flinck Oy"); ?> | Made by <a class="text-white" target="_blank" href="https://noju.fi/">Noju Oy</a>
+                    </p>
             </div>
             <div class="col-md-4">
                 <?php dynamic_sidebar('footer-2'); ?>
