@@ -195,6 +195,15 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'text','image', 'cta' ),
         ));
         acf_register_block_type(array(
+            'name'              => 'cta-text',
+            'title'             => __('Call to action, text only'),
+            'description'       => __('A custom text cta block.'),
+            'render_template'   => 'acf/blocks/cta-text.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'text','button', 'cta' ),
+        ));
+        acf_register_block_type(array(
             'name'              => 'contact-boxes',
             'title'             => __('contact-boxes'),
             'description'       => __('A custom contact block.'),
