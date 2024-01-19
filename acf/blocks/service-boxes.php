@@ -45,10 +45,21 @@ $icons = array(
 
 );
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+    <div class="container-fluid bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 py-5 text-center">
+                    <p>--- <?php the_field('top_text'); ?></p>
+                    <h2><?php the_field('heading'); ?></h2>
+                    <p><?php the_field('text'); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 mb-5 pb-5">
+            <div class="col-lg-4 mb-5 pb-5 d-none">
 
                 <?php $image = get_field( 'image' );
                 $size        = 'large'; // (thumbnail, medium, large, full or custom size)
@@ -58,20 +69,18 @@ $icons = array(
 
                 ?>
             </div>
-            <div class="col-lg-7 offset-md-1">
-                <p>--- <?php the_field('top_text'); ?></p>
-                <h2><?php the_field('heading'); ?></h2>
-                <p><?php the_field('text'); ?></p>
 
+            <div class="col-lg-12">
                 <div class="row mt-5">
                     <?php if (have_rows('service_boxes')):while (have_rows('service_boxes')) : the_row();
                         $chosenIcon = get_sub_field('choose_icon');
                         ?>
-                        <div class="col-md-6 d-flex service-box">
-                            <div class="icon-container">
-                                <?php echo $icons[$chosenIcon]; ?>
-                            </div>
-                            <div class="content">
+                        <div class="col-md-3">
+
+                            <div class="content d-flex flex-column service-box align-items-center text-center">
+                                <div class="icon-container mb-3">
+                                    <?php echo $icons[$chosenIcon]; ?>
+                                </div>
                                 <h3><?php the_sub_field('heading'); ?></h3>
                                 <p><?php the_sub_field('text'); ?></p>
                                 <?php if(get_sub_field('link')): ?>

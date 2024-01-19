@@ -47,27 +47,13 @@ $icons = array(
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-5 pb-5">
-
-                <?php $image = get_field( 'image' );
-                $size        = 'large'; // (thumbnail, medium, large, full or custom size)
-                if ( $image ) {
-                    echo wp_get_attachment_image( $image, $size, false, array( 'class' => 'mw-100 h-auto' ) );
-                }
-
-                ?>
-            </div>
-            <div class="col-lg-7 offset-md-1">
-                <p>--- <?php the_field('top_text'); ?></p>
                 <h2><?php the_field('heading'); ?></h2>
                 <p><?php the_field('text'); ?></p>
-
                 <div class="row mt-5">
-                    <?php if (have_rows('service_boxes')):while (have_rows('service_boxes')) : the_row();
+                    <?php if (have_rows('icon_boxes')):while (have_rows('icon_boxes')) : the_row();
                         $chosenIcon = get_sub_field('choose_icon');
                         ?>
-                        <div class="col-md-6 d-flex service-box">
+                        <div class="col-md-3 d-flex icon-box">
                             <div class="icon-container">
                                 <?php echo $icons[$chosenIcon]; ?>
                             </div>
@@ -80,18 +66,6 @@ $icons = array(
                             </div>
                         </div>
                     <?php endwhile; endif; ?>
-
                 </div>
-                <?php if( $button ): ?>
-                    <a class="btn btn-lg bg-blue text-white" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?> &raquo;</a>
-                <?php endif; ?>
-                <?php if( get_field('phone') ): ?>
-                    <a href="tel:<?php the_field('phone'); ?>" class="btn ms-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z"/></svg>
-                        <span class="ms-2"><?php the_field('phone'); ?></span>
-                    </a>
-                <?php endif; ?>
-            </div>
-        </div>
     </div>
 </div>

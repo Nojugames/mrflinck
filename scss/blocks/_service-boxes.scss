@@ -1,15 +1,23 @@
 .block-service-boxes {
-  padding: 6rem 0 3rem;
+  //padding: 6rem 0 3rem;
   background: #ffffff;
   .service-box {
-    margin-bottom:2rem;
+    //margin:1rem;
+    padding:1rem;
+    .content {
+      padding:1rem;
+      background-color:$grey;
+      h3 {
+        font-size:20px;
+      }
+    }
   }
   .icon-container {
-    margin-right:1rem;
+    //margin-right:1rem;
     svg {
       border-radius:4px;
-      width:50px;
-      height:50px;
+      width:32px;
+      height:32px;
       padding:0.5rem;
       background: $orange;
       path {
