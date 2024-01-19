@@ -40,7 +40,7 @@ $query = new WP_Query( $args ); ?>
     <div id="" class="container-fluid py-5" style="background-color:#f8f8f8;">
         <div class="container">
             <div class="text-center">
-                <h2><?php echo pll__('Våra produkter'); ?></h2>
+                <h2><?php echo pll__('Våra andra produkter'); ?></h2>
                 <p><?php echo pll__('Vi säljer och installerar högklassiga Wilfa luftvärmepumpar – den enda tillverkaren på marknaden med 7 års garanti.'); ?></p>
             </div>
         </div>
