@@ -50,7 +50,6 @@ $icons = array(
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-3 py-5 text-center">
-                    <p>--- <?php the_field('top_text'); ?></p>
                     <h2><?php the_field('heading'); ?></h2>
                     <p><?php the_field('text'); ?></p>
                 </div>

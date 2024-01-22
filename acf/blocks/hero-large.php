@@ -43,7 +43,10 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
     </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 content-container">
+                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="z-index:11">
+                    <img class="hero-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Mister-Flinck-logo_mascot.png" alt="">
+                </div>
+                <div class="col-lg-6  content-container">
                     <?php if ($image): ?>
                         <?php echo wp_get_attachment_image($image, $size); ?>
                     <?php endif; ?>
@@ -66,9 +69,6 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
                             <a class="btn mt-5 mt-sm-0 btn-primary btn-lg bg-green text-white" href="<?php echo esc_url( $button_2_url ); ?>" target="<?php echo esc_attr( $button_2_target ); ?>"><?php echo esc_html( $button_2_title ); ?> &raquo;</a>
                         <?php endif; ?>
                     </div>
-                </div>
-                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="z-index:11">
-                    <img class="mw-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/lofoten.png" alt="">
                 </div>
             </div>
         </div>
