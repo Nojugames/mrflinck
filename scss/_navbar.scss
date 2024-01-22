@@ -1,33 +1,41 @@
 .top-navbar {
   //background: #05196B;
   //background-color: rgb(25, 73, 107);
-  background-color: white;
+  background-color: #001521;
 
   a, p {
     //color: black;
-    color: $blue;
+    color: $white;
     font-size: 18px;
-
+    margin-bottom:0;
   }
 
   a {
     text-decoration: none;
   }
 
-  .social-media-links, .top-navbar-text, .top-navbar-phone {
+  .social-media-links {
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     a {
-      margin: 0 12px;
+      margin: 0 6px;
     }
   }
+  svg {
+    height: 20px;
+    margin-right: 0.25rem;
 
+    path {
+      fill: $yellow;
+    }
+  }
   .social-media-links {
+    margin-right:2rem;
     svg {
-      height: 24px;
+      height: 20px;
 
       path {
         fill: #d9d9d9;
@@ -35,35 +43,10 @@
     }
 
     @include media-breakpoint-down(md) {
-      justify-content: start;
+      //justify-content: start;
     }
   }
 
-  .top-navbar-text {
-    justify-content: start;
-
-    svg {
-      height: 20px;
-      margin-right: 0.5rem;
-
-      path {
-        fill: #f45f16;
-      }
-    }
-  }
-
-  .top-navbar-phone {
-    justify-content: end;
-
-    svg {
-      height: 20px;
-      margin-right: 0.5rem;
-
-      path {
-        fill: #f45f16;
-      }
-    }
-  }
 }
 
 .navbar-brand {

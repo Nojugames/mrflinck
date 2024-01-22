@@ -14,6 +14,11 @@
       max-width:120px;
     }
   }
+  svg {
+    path {
+      fill:$yellow;
+    }
+  }
   .cover-hero {
     position: absolute;
     top:0;
