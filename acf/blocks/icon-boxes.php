@@ -47,8 +47,8 @@ $icons = array(
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid">
     <div class="container">
-                <h2><?php the_field('heading'); ?></h2>
-                <p><?php the_field('text'); ?></p>
+                <h2 class="text-center"><?php the_field('heading'); ?></h2>
+                <p class="text-center"><?php the_field('text'); ?></p>
                 <div class="row mt-5">
                     <?php if (have_rows('icon_boxes')):while (have_rows('icon_boxes')) : the_row();
                         $chosenIcon = get_sub_field('choose_icon');

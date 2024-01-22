@@ -31,19 +31,24 @@ if( $button_2 ) {
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5">
-    <div class="container d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">
-        <div class="d-flex flex-column text-center text-lg-start">
-            <h2><?php the_field( 'heading' ); ?></h2>
-            <p><?php the_field( 'ingress' ); ?></p>
-        </div>
-        <div class="d-flex justify-content-center align-items-center flex-column flex-sm-row mt-4">
-            <?php if( $button ): ?>
-                <a class="btn btn-outline-black text-black btn-lg me-sm-5" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?> &raquo;</a>
-            <?php endif; ?>
-            <?php if( $button_2 ): ?>
-                <a class="btn mt-5 mt-sm-0 btn-primary btn-lg bg-green text-white" href="<?php echo esc_url( $button_2_url ); ?>" target="<?php echo esc_attr( $button_2_target ); ?>"><?php echo esc_html( $button_2_title ); ?> &raquo;</a>
-            <?php endif; ?>
+<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr($className); ?> container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 d-flex justify-content-between align-items-center bg-blue p-5 my-5" style="border-radius:12px;">
+                <div class="d-flex flex-column text-center text-lg-start">
+                    <h2><?php the_field( 'heading' ); ?></h2>
+                    <p><?php the_field( 'ingress' ); ?></p>
+                </div>
+                <div class="d-flex flex-column justify-content-end align-items-end">
+                    <?php if( $button ): ?>
+                        <a class="btn btn-mrflinck" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?> &raquo;</a>
+                    <?php endif; ?>
+                    <?php if( $button_2 ): ?>
+                        <a class="text-white" href="<?php echo esc_url( $button_2_url ); ?>" target="<?php echo esc_attr( $button_2_target ); ?>"><?php echo esc_html( $button_2_title ); ?> &raquo;</a>
+                    <?php endif; ?>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,8 @@
 .block-icon-boxes {
-  svg {
+  padding-bottom:4rem;
+  .icon-box {
+    margin-bottom:1rem;
+    svg {
     border-radius: 4px;
     width: 32px;
     height: 32px;
@@ -10,4 +13,6 @@
       fill:white;
     }
   }
+  }
+
 }
