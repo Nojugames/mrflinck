@@ -46,7 +46,7 @@ $icons = array(
 );
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid">
-    <div class="container">
+    <div class="container-xl">
                 <h2 class="text-center"><?php the_field('heading'); ?></h2>
                 <p class="text-center"><?php the_field('text'); ?></p>
                 <div class="row mt-5">

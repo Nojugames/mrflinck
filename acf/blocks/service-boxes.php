@@ -47,7 +47,7 @@ $icons = array(
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container-fluid bg-grey">
-        <div class="container">
+        <div class="container-xl">
             <div class="row">
                 <div class="col-md-6 offset-md-3 py-5 text-center">
                     <h2><?php the_field('heading'); ?></h2>
@@ -56,7 +56,7 @@ $icons = array(
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
             <div class="col-lg-4 mb-5 pb-5 d-none">
 
@@ -74,7 +74,7 @@ $icons = array(
                     <?php if (have_rows('service_boxes')):while (have_rows('service_boxes')) : the_row();
                         $chosenIcon = get_sub_field('choose_icon');
                         ?>
-                        <div class="col-md-3">
+                        <div class="col-md-6 col-lg-3">
 
                             <div class="content d-flex flex-column service-box align-items-center text-center">
                                 <div class="icon-container mb-3">

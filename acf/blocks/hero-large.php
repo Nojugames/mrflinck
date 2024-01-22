@@ -41,7 +41,7 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
 <div id="<?php echo esc_attr($id); ?>" style="background-image: url('<?php echo esc_url(get_field('background_image')); ?>')" class="<?php echo esc_attr($className); ?> container-fluid">
     <div class="cover-hero">
     </div>
-        <div class="container">
+        <div class="container-xl">
             <div class="row">
                 <div class="col-lg-6 col-md-4 d-flex justify-content-center align-items-center" style="z-index:11">
                     <img class="hero-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Mister-Flinck-logo_mascot.png" alt="">
