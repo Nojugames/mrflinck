@@ -43,10 +43,10 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
     </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 d-flex justify-content-center align-items-center" style="z-index:11">
+                <div class="col-lg-6 col-md-4 d-flex justify-content-center align-items-center" style="z-index:11">
                     <img class="hero-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Mister-Flinck-logo_mascot.png" alt="">
                 </div>
-                <div class="col-lg-6  content-container">
+                <div class="col-lg-6 col-md-8  content-container">
                     <?php if ($image): ?>
                         <?php echo wp_get_attachment_image($image, $size); ?>
                     <?php endif; ?>
