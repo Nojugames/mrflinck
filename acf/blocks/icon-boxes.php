@@ -53,7 +53,7 @@ $icons = array(
                     <?php if (have_rows('icon_boxes')):while (have_rows('icon_boxes')) : the_row();
                         $chosenIcon = get_sub_field('choose_icon');
                         ?>
-                        <div class="col-md-3 d-flex icon-box">
+                        <div class="col-md-6 d-flex icon-box">
                             <div class="icon-container">
                                 <?php echo $icons[$chosenIcon]; ?>
                             </div>

@@ -46,7 +46,7 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
                 <div class="col-lg-6 col-md-4 d-flex justify-content-center align-items-center" style="z-index:11">
                     <img class="hero-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Mister-Flinck-logo_mascot.png" alt="">
                 </div>
-                <div class="col-lg-6 col-md-8  content-container">
+                <div class="col-lg-6 col-md-8 content-container">
                     <?php if ($image): ?>
                         <?php echo wp_get_attachment_image($image, $size); ?>
                     <?php endif; ?>
@@ -68,6 +68,10 @@ $size = 'large'; // (thumbnail, medium, large, full or custom size)
                         <?php if( $button_2 ): ?>
                             <a class="btn mt-5 mt-sm-0 btn-primary btn-lg bg-green text-white" href="<?php echo esc_url( $button_2_url ); ?>" target="<?php echo esc_attr( $button_2_target ); ?>"><?php echo esc_html( $button_2_title ); ?> &raquo;</a>
                         <?php endif; ?>
+                        <a href="tel:+358 40 834 8504" class="btn ms-5 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z"></path></svg>
+                            <span class="text-white ms-2">+358 40 834 8504</span>
+                        </a>
                     </div>
                 </div>
             </div>
