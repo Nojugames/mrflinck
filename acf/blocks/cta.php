@@ -40,7 +40,7 @@ if( $button_2 ) {
                 </div>
                 <div class="d-flex flex-column align-items-center align-items-md-end">
                     <?php if( $button ): ?>
-                        <a class="btn btn-mrflinck" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?> &raquo;</a>
+                        <a class="btn btn-mrflinck text-nowrap" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?> &raquo;</a>
                     <?php endif; ?>
                     <?php if( $button_2 ): ?>
                         <a class="text-white" href="<?php echo esc_url( $button_2_url ); ?>" target="<?php echo esc_attr( $button_2_target ); ?>"><?php echo esc_html( $button_2_title ); ?> &raquo;</a>
