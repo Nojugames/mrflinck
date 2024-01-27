@@ -25,7 +25,7 @@ $currentProductId = get_the_ID();
 );
 $query = new WP_Query( $args ); ?>
 
-    <div id="" class="container-fluid py-5" style="background-color:#f8f8f8;">
+    <div id="" class="container-fluid py-5 block-product-cards" style="background-color:#f8f8f8;">
     <div class="container">
         <div class="text-center">
             <h2><?php echo pll__('Andra artiklar som kan intressera dig'); ?></h2>
@@ -42,7 +42,7 @@ $query = new WP_Query( $args ); ?>
                     <a href="<?php echo get_the_permalink(); ?>" class="product-inner"
                        title="<?php the_title(); ?>">
                         <div class="ratio ratio-4x3 img-fluid">
-                            <?php the_post_thumbnail('medium'); ?>
+                            <?php the_post_thumbnail('medium',array('class' => 'p-3')); ?>
                         </div>
                         <div class="product-info">
                             <h3>

@@ -103,9 +103,15 @@ function mrflinck_excerpt_read_more_link( $more ) {
 	if ( ! is_admin() ) {
 		global $post;
 
-		return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf( __( '...%s', 'mrflinck' ), '<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>' ) . '</a>';
+		return ' ...';
 	}
 }
+
+
+function custom_excerpt_length($length) {
+    return 20; // Change this number to the desired length of the excerpt
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
 
 add_filter( 'big_image_size_threshold', '__return_false' );
 add_filter( 'intermediate_image_sizes_advanced', 'mrflinck_image_insert_override' );
