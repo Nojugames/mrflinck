@@ -6,6 +6,7 @@
             "key": "field_63ed090cdb684",
             "label": "Title",
             "name": "title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_63ed0928db685",
             "label": "Text",
             "name": "text",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,13 +43,49 @@
             "new_lines": ""
         },
         {
-            "key": "field_63ed093f8210f",
-            "label": "Products",
-            "name": "products",
-            "type": "repeater",
+            "key": "field_65b683caa31e3",
+            "label": "Lift type",
+            "name": "lift_type",
+            "aria-label": "",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "auto": "Automatiskt",
+                "custom_links": "Egna länkar",
+                "products": "Välj produkter"
+            },
+            "default_value": "custom",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63ed093f8210f",
+            "label": "Custom links",
+            "name": "custom_links",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b683caa31e3",
+                        "operator": "==",
+                        "value": "custom_links"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -65,6 +103,7 @@
                     "key": "field_63ed0b77c1d68",
                     "label": "Product name",
                     "name": "product_name",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -85,6 +124,7 @@
                     "key": "field_63ed0bb9741fa",
                     "label": "Product image",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -110,6 +150,7 @@
                     "key": "field_63ed0eb3ac6b7",
                     "label": "Minfo",
                     "name": "minfo",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -130,6 +171,7 @@
                     "key": "field_63ed0ef8f150c",
                     "label": "Product link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -146,6 +188,7 @@
                     "key": "field_63f07d816a6a4",
                     "label": "Price",
                     "name": "price",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -163,6 +206,40 @@
                     "parent_repeater": "field_63ed093f8210f"
                 }
             ]
+        },
+        {
+            "key": "field_65b684c4a31e4",
+            "label": "Products",
+            "name": "products",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Visar endast publicerade produkter",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b683caa31e3",
+                        "operator": "==",
+                        "value": "products"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 1,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -183,5 +260,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1676705168
+    "modified": 1706462211
 }
