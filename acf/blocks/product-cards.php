@@ -16,11 +16,10 @@ if (!empty($block['align'])) {
     $className .= ' align' . $block['align'];
 }
 
-$choice = get_field('lift_type');
+$chosen_type = get_field('lift_type');
 
 
 ?>
-
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5"
      style="background-color:#f8f8f8;">
     <div class="container">
@@ -29,7 +28,7 @@ $choice = get_field('lift_type');
             <p><?php the_field('text'); ?></p>
         </div>
 
-        <?php if ($choice = 'custom_links' && have_rows('custom_links')): ?>
+        <?php if ($chosen_type = 'custom_links' && have_rows('products')): ?>
             <div class="row">
                 <?php while (have_rows('custom_links')) : the_row(); ?>
                     <div class="col-md-6 col-lg-4 product-card">
@@ -62,13 +61,11 @@ $choice = get_field('lift_type');
                     </div>
                 <?php endwhile; ?>
             </div>
-        <?php endif; ?>
-        <?php if ($choice = 'products' && have_rows('custom_links')): ?>
-        <?php endif; ?>
-        <?php if ($choice = 'auto' && have_rows('custom_links')): ?>
+        <?php elseif ($chosen_type = 'products' && have_rows('products')): ?>
+        <?php elseif ($chosen_type = 'auto'): ?>
             <?php $args = array(
                 'post_type' => 'product',
-                'status'        => 'published',
+                //'status'        => 'published',
                 'posts_per_page' => 6,
             );
             $query = new WP_Query( $args ); ?>
@@ -76,7 +73,8 @@ $choice = get_field('lift_type');
 
                     <div class="row">
                         <?php while ($query->have_posts()) : $query->the_post();
-                            $productPrice = get_field('pris');
+                            $productPrice = get_field('price', get_the_ID());
+                            $productShortText = get_field('lift_text', get_the_ID());
                             ?>
                             <div class="col-md-6 col-lg-4 product-card">
                                 <a href="<?php echo get_the_permalink(); ?>" class="product-inner"
@@ -89,7 +87,7 @@ $choice = get_field('lift_type');
                                             <?php the_title(); ?>
                                         </h3>
                                         <p>
-                                            <?php the_excerpt(); ?>
+                                            <?php echo esc_html($productShortText); ?>
                                         </p>
                                         <p class="card-price">
                                             <?php echo esc_html($productPrice); ?>
