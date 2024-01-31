@@ -67,6 +67,7 @@ $chosen_type = get_field('lift_type');
                 'post_type' => 'product',
                 //'status'        => 'published',
                 'posts_per_page' => 6,
+                'order' => 'ASC'
             );
             $query = new WP_Query( $args ); ?>
             <?php if ($query->have_posts()) : ?>

@@ -79,8 +79,8 @@
     }
     .btn.btn-outline-white {
       &:hover {
-        background-color:#59ffb1 !important;
-        border-color: #59ffb1;
+        background-color:$yellow !important;
+        border-color: $yellow;
         color:black !important;
       }
     }

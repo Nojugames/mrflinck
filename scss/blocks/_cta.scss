@@ -4,9 +4,16 @@
   h2,h3,p {
     color:white;
   }
+  p {
+    margin-bottom:0;
+  }
   .btn-mrflinck {
     margin-left:2rem;
     margin-bottom:1rem;
+    @include media-breakpoint-down(md) {
+      margin:2rem 0 0 0;
+
+    }
   }
   .btn.text-black {
     border:2px solid white;
@@ -17,6 +24,12 @@
   .btn.bg-green {
     &:hover {
       background-color: rgb(40, 75, 56) !important;
+    }
+  }
+  .wilfa-cta {
+    border-radius:12px;
+    @include media-breakpoint-down(md) {
+      border-radius: initial;
     }
   }
 }

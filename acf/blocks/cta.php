@@ -33,7 +33,7 @@ if( $button_2 ) {
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr($className); ?> container-xl">
         <div class="row">
-            <div class="col-md-8 offset-md-2 d-md-flex justify-content-between align-items-center bg-blue p-5 my-5" style="border-radius:12px;">
+            <div class="col-md-8 offset-md-2 d-md-flex justify-content-between align-items-center bg-blue p-5 my-5 wilfa-cta">
                 <div class="d-flex flex-column text-center text-lg-start">
                     <h2><?php the_field( 'heading' ); ?></h2>
                     <p><?php the_field( 'ingress' ); ?></p>
