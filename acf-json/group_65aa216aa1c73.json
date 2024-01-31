@@ -4,8 +4,28 @@
     "fields": [
         {
             "key": "field_65aa216afb8a3",
-            "label": "Pris",
-            "name": "pris",
+            "label": "Price",
+            "name": "price",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65ba413dc8791",
+            "label": "Lift text",
+            "name": "lift_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -41,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705648534
+    "modified": 1706705229
 }
