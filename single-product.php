@@ -34,7 +34,7 @@ $query = new WP_Query( $args ); ?>
     <div class="container">
         <div class="row">
         <?php while ($query->have_posts()) : $query->the_post();
-                $productPrice = get_field('pris');
+                $productPrice = get_field('price');
                 $liftText = get_field('lift_text');
                 ?>
             <div class="col-md-6 col-lg-3 product-card">
