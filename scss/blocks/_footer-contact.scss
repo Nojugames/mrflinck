@@ -10,10 +10,11 @@
       width:32px;
       height:32px;
       padding:4px;
-      background: $orange;
+      //background: $orange;
       margin-right:2rem;
       path {
-        fill: white;
+        //fill: white;
+        fill: $yellow;
       }
     }
     p {

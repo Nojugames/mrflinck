@@ -35,6 +35,7 @@ $query = new WP_Query( $args ); ?>
         <div class="row">
         <?php while ($query->have_posts()) : $query->the_post();
                 $productPrice = get_field('pris');
+                $liftText = get_field('lift_text');
                 ?>
             <div class="col-md-6 col-lg-3 product-card">
                 <a href="<?php echo get_the_permalink(); ?>" class="product-inner"
@@ -47,7 +48,7 @@ $query = new WP_Query( $args ); ?>
                             <?php the_title(); ?>
                         </h3>
                         <p>
-                            <?php the_excerpt(); ?>
+                            <?php echo esc_html($liftText); ?>
                         </p>
                         <p class="card-price">
                             <?php echo esc_html($productPrice); ?>
