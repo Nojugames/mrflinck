@@ -1,7 +1,7 @@
 .top-navbar {
   //background: #05196B;
   //background-color: rgb(25, 73, 107);
-  background-color: #001521;
+  background-color: $blue-dark;
 
   a, p {
     //color: black;
@@ -14,16 +14,7 @@
     text-decoration: none;
   }
 
-  .social-media-links {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    a {
-      margin: 0 6px;
-    }
-  }
   svg {
     height: 20px;
     margin-right: 0.25rem;
@@ -32,21 +23,50 @@
       fill: $yellow;
     }
   }
-  .social-media-links {
-    margin-right:2rem;
-    svg {
-      height: 20px;
+}
 
-      path {
-        fill: #d9d9d9;
-      }
-    }
-
-    @include media-breakpoint-down(md) {
-      //justify-content: start;
+.btn-close-flinck {
+  background: initial;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  svg {
+    path {
+      fill:white;
     }
   }
+}
+.lang-select {
+  margin:0 1.5rem 0 0;
+  padding:0.5rem 0;
+  list-style: none;
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+}
 
+.social-media-links {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:1rem;
+
+  a {
+    margin: 0 6px;
+  }
+  svg {
+    height: 20px;
+
+    path {
+      fill: #d9d9d9;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    //justify-content: start;
+  }
 }
 
 .navbar-brand {
@@ -139,9 +159,14 @@
     right: 0;
     width: 50px;
     height: 50px;
-    background: #e5efff;
+    background: $blue;
     border: none;
     border-left: 1px solid black;
+    svg {
+      path {
+        fill:white;
+      }
+    }
 
     &.toggle-sub-menu-open {
       svg {
@@ -185,7 +210,7 @@
 
         &:hover {
           //background-color:#031d44;
-          background-color: #101010;
+          background-color: $blue-dark;
           color: white;
         }
       }
@@ -197,7 +222,7 @@
           //border-left: 4px solid orange;
           //box-shadow: 0 0 5px #DDD;
           //background-color:#031d44;
-          background-color: #101010;
+          background-color: $blue-dark;
           color: white;
         }
 
@@ -241,4 +266,10 @@
     }
   }
 
+}
+
+.mrflinck-cta {
+  p {
+    margin: 0;
+  }
 }

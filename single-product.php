@@ -3,8 +3,6 @@
 // the query
 $currentProductId = get_the_ID();
  ?>
-
-
     <main id="content" role="main" class="container-xl">
         <div class="row my-5">
             <div class="col-12">

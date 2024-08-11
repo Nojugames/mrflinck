@@ -17,8 +17,7 @@ if (!empty($block['align'])) {
 }
 
 $chosen_type = get_field('lift_type');
-
-
+$show_amount = get_field('amount');
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> container-fluid py-5"
      style="background-color:#f8f8f8;">
@@ -28,7 +27,7 @@ $chosen_type = get_field('lift_type');
             <p><?php the_field('text'); ?></p>
         </div>
 
-        <?php if ($chosen_type = 'custom_links' && have_rows('products')): ?>
+        <?php if ($chosen_type == 'custom_links'): ?>
             <div class="row">
                 <?php while (have_rows('custom_links')) : the_row(); ?>
                     <div class="col-md-6 col-lg-4 product-card">
@@ -62,16 +61,70 @@ $chosen_type = get_field('lift_type');
                 <?php endwhile; ?>
             </div>
         <?php elseif ($chosen_type = 'products' && have_rows('products')): ?>
+            <?php
+            $featured_posts = get_field('products');?>
+                <div class="row">
+                    <?php foreach( $featured_posts as $post ):
+
+                        // Setup this post for WP functions (variable must be named $post).
+                        setup_postdata($post);
+                        $productPrice = get_field('price', $post);
+                        $productShortText = get_field('lift_text', $post);
+                    ?>
+                        <div class="col-md-6 col-lg-4 product-card">
+                            <a href="<?php echo get_the_permalink(); ?>" class="product-inner"
+                               title="<?php the_title(); ?>">
+                                <div class="ratio ratio-4x3 img-fluid">
+                                    <?php the_post_thumbnail('medium', $post); ?>
+                                    <?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
+                                </div>
+                                <div class="product-info">
+                                    <h3>
+                                        <?php the_title(); ?>
+                                    </h3>
+                                    <p>
+                                        <?php echo esc_html($productShortText); ?>
+                                    </p>
+                                    <p class="card-price">
+                                        <?php echo esc_html($productPrice); ?>
+                                    </p>
+                                    <p class="fake-link">
+                                        <?php echo pll__('Läs mera'); ?> &raquo;
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php
+                // Reset the global post object so that the rest of the page works correctly.
+                wp_reset_postdata(); ?>
+
         <?php elseif ($chosen_type = 'auto'): ?>
-            <?php $args = array(
+            <?php
+            $jamp = '';
+            if (!$show_amount) {
+                $show_amount = 3;
+            }
+            if(get_field('valj_kategori')) {
+                $jamp = array(
+                    array(
+                        'taxonomy' => 'product-category',   // taxonomy name
+                        'field' => 'term_id',           // term_id, slug or name
+                        'terms' => get_field('valj_kategori'),            // term id, term slug or term name
+                    )
+                );
+            }
+
+            $args = array(
                 'post_type' => 'product',
                 //'status'        => 'published',
-                'posts_per_page' => 6,
-                'order' => 'ASC'
+                'posts_per_page' => $show_amount,
+                'order' => 'ASC',
+                'tax_query' => $jamp,
             );
             $query = new WP_Query( $args ); ?>
             <?php if ($query->have_posts()) : ?>
-
                     <div class="row">
                         <?php while ($query->have_posts()) : $query->the_post();
                             $productPrice = get_field('price', get_the_ID());
@@ -103,6 +156,7 @@ $chosen_type = get_field('lift_type');
                     </div>
 
             <?php endif; ?>
+        <?php //wp_reset_postdata(); ?>
         <?php endif; ?>
     </div>
 </div>

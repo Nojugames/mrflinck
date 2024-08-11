@@ -59,7 +59,8 @@
             "choices": {
                 "auto": "Automatiskt",
                 "custom_links": "Egna länkar",
-                "products": "Välj produkter"
+                "products": "Välj produkter",
+                "categories": "Välj kategori"
             },
             "default_value": "custom",
             "return_format": "value",
@@ -68,6 +69,36 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_66b8d2552fe2c",
+            "label": "Amount",
+            "name": "amount",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b683caa31e3",
+                        "operator": "!=",
+                        "value": "custom_links"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": -1,
+            "max": "",
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_63ed093f8210f",
@@ -240,6 +271,46 @@
             "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_66b8d2b013fc0",
+            "label": "Välj kategori",
+            "name": "valj_kategori",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Välj de kategorier som ska visas.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65b683caa31e3",
+                        "operator": "==",
+                        "value": "categories"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65b683caa31e3",
+                        "operator": "==",
+                        "value": "auto"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "product-category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -260,5 +331,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706703959
+    "modified": 1723391388
 }
